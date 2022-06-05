@@ -7,11 +7,12 @@ import Amplify from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 import {AmplifyProvider} from "@aws-amplify/ui-react";
 import awsconfig from './aws-exports';
+import {studioTheme} from './ui-components';
 Amplify.configure(awsconfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <AmplifyProvider>
+    <AmplifyProvider theme={studioTheme}>
       <App />
     </AmplifyProvider>
   </React.StrictMode>,
