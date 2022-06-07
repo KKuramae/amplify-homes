@@ -4,7 +4,8 @@ import {
   NavBar,
   Ampligram,
   MarketingPricing,
-  MarketingFooter
+  MarketingFooter,
+  EditProfile
 } from './ui-components';
 import { Grid, View, useTheme, Card } from '@aws-amplify/ui-react';
 import Iframe from 'react-iframe';
@@ -57,7 +58,7 @@ function App() {
           columnStart="2"
           columnEnd="-1"
         >
-          <Ampligram />
+          <EditProfile />
         </Card>
         <Card backgroundColor={tokens.colors.red[60]}
           columnStart="1"
@@ -112,19 +113,22 @@ function App() {
       <Grid
         columnGap="0.5rem"
         rowGap="0.5rem"
-        templateColumns="1fr 1fr 1fr"
+        templateColumns="1fr 4fr"
+        templateRows="1fr 5fr auto 3fr"
       >
         <Card backgroundColor={tokens.colors.blue[10]} variation="elevated"
           columnStart="1"
           columnEnd="-1"
           rowStart="1"
-          rowEnd="1"
+          rowEnd="2"
         >
           <NavBar />
         </Card>
         <Card backgroundColor={tokens.colors.orange[60]}
           columnStart="1"
           columnEnd="2"
+          rowStart="2"
+          rowEnd="4"
         >
           <SideBar />
         </Card>
@@ -132,13 +136,19 @@ function App() {
           columnStart="2"
           columnEnd="-1"
         >
-          <MarketingPricing />
+          <EditProfile />
         </Card>
         <Card backgroundColor={tokens.colors.purple[60]}
           columnStart="2"
           columnEnd="-1"
         >
           <Ampligram />
+        </Card>
+        <Card backgroundColor={tokens.colors.red[60]}
+          columnStart="1"
+          columnEnd="-1"
+        >
+          <MarketingFooter /> 
         </Card>
       </Grid>
     </div>
